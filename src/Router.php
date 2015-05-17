@@ -18,7 +18,7 @@ class Router implements IRouter
     {
         $parameters = explode('/', mb_substr($url, 1));
         $router = $this->checkRouter($parameters, $routes);
-        return $this->validateRouter($router['router']);
+        return $this->validateRouter($router);
     }
 
     /**
@@ -80,12 +80,12 @@ class Router implements IRouter
      */
     public function validateRouter($router)
     {
-        if (!empty($router['methods']) && !in_array(filter_input(INPUT_SERVER, 'REQUEST_METHOD'), $router['methods'])) {
+        if (!empty($router['router']['methods']) && !in_array(filter_input(INPUT_SERVER, 'REQUEST_METHOD'), $router['methods'])) {
             throw new Exceptions\MethodNotAllowedException;
         }
-        if (!empty($router['security'])) {
-            if (isset($router['security']['ip'])) {
-                if (!in_array(filter_input(INPUT_SERVER, 'REMOTE_ADDR'), $router['security']['ip'])) {
+        if (!empty($router['router']['security'])) {
+            if (isset($router['router']['security']['ip'])) {
+                if (!in_array(filter_input(INPUT_SERVER, 'REMOTE_ADDR'), $router['router']['security']['ip'])) {
                     throw new Exceptions\AccessDeniedException;
                 }
             }

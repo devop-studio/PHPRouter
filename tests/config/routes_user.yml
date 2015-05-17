@@ -1,0 +1,22 @@
+homepage:
+    path: /
+    action: Namespace:Controller:action
+    
+user_view:
+    path: /user/view/:name
+    action: Namespace:Controller:action
+    methods:
+        - POST
+        
+user_action:
+    path: /user/:id/:action
+    action: Namespace:Controller:action
+    requires:
+        id: digit
+        action: [add, view, edit, delete]
+        
+admin_user:
+    path: /admin
+    import: ./tests/config/routes_user_admin.yml
+    security:
+        - { ip: [127.0.0.1, ::1] }
