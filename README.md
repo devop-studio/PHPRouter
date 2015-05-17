@@ -1,7 +1,7 @@
 # Router
 **PHP Router** is totally inspired by [Gatakka/PGF-Router](https://github.com/gatakka/PGF-Router/) and does not use regular expressions too.
 
-[![Build Status](https://travis-ci.org/desertknight/symfony2-extensions.svg?branch=master)](https://travis-ci.org/desertknight/symfony2-extensions) [![Latest Stable Version](https://poser.pugx.org/millennium/router/v/stable)](https://packagist.org/packages/millennium/router) [![Total Downloads](https://poser.pugx.org/millennium/router/downloads)](https://packagist.org/packages/millennium/router) [![Latest Unstable Version](https://poser.pugx.org/millennium/router/v/unstable)](https://packagist.org/packages/millennium/router) [![License](https://poser.pugx.org/millennium/router/license)](https://packagist.org/packages/millennium/router)
+[![Build Status](https://travis-ci.org/desertknight/symfony2-extensions.svg?branch=master)](https://travis-ci.org/desertknight/symfony2-extensions) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/desertknight/PHPRouter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/desertknight/PHPRouter/?branch=master) [![Latest Stable Version](https://poser.pugx.org/millennium/router/v/stable)](https://packagist.org/packages/millennium/router) [![Total Downloads](https://poser.pugx.org/millennium/router/downloads)](https://packagist.org/packages/millennium/router) [![Latest Unstable Version](https://poser.pugx.org/millennium/router/v/unstable)](https://packagist.org/packages/millennium/router) [![License](https://poser.pugx.org/millennium/router/license)](https://packagist.org/packages/millennium/router)
 
 ## Requirements:
 
