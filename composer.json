@@ -10,7 +10,8 @@
             "email": "about@z-latko.info"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=5.4.0",
         "ext-mbstring": "*",
