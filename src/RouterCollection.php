@@ -29,7 +29,7 @@ class RouterCollection implements IRouterCollection
 
     /**
      * 
-     * @param string $filename
+     * @param string
      * 
      * @return array
      */
@@ -47,7 +47,7 @@ class RouterCollection implements IRouterCollection
                     $node[$parameter] = $this->prepareRouter($segment, $name, $node, $route, empty($parameters));
                 }
                 $node = &$node[$parameter]['items'];
-            } while ($parameters);
+            } while (!empty($parameters));
         }
         return $this->routes;
     }
@@ -62,21 +62,23 @@ class RouterCollection implements IRouterCollection
      */
     private function parseFiles($filename, $routes = array(), $options = array())
     {
-        foreach (Yaml::parse($filename) AS $name => $route)
-        {
-            if (isset($route['import'])) {
-                return $this->parseFiles($route['import'], $routes, $route);
-            } else {
-                if (isset($options['path'])) {
-                    $route['path'] = $options['path'] . $route['path'];
+        if (!file_exists($filename)) {
+            foreach (Yaml::parse($filename) AS $name => $route)
+            {
+                if (isset($route['import'])) {
+                    return $this->parseFiles($route['import'], $routes, $route);
+                } else {
+                    if (isset($options['path'])) {
+                        $route['path'] = $options['path'] . $route['path'];
+                    }
+                    if (isset($options['methods']) && !isset($route['methods'])) {
+                        $route['methods'] = $options['methods'];
+                    }
+                    if (isset($options['security']) && !isset($route['security'])) {
+                        $route['security'] = $options['security'];
+                    }
+                    $routes[$name] = $route;
                 }
-                if (isset($options['methods']) && !isset($route['methods'])) {
-                    $route['methods'] = $options['methods'];
-                }
-                if (isset($options['security']) && !isset($route['security'])) {
-                    $route['security'] = $options['security'];
-                }
-                $routes[$name] = $route;
             }
         }
         return $routes;
@@ -118,7 +120,7 @@ class RouterCollection implements IRouterCollection
 
     /**
      * 
-     * @param strig $parameter
+     * @param string
      * @param array $route
      * 
      * @return string
