@@ -62,7 +62,7 @@ class RouterCollection implements IRouterCollection
      */
     private function parseFiles($filename, $routes = array(), $options = array())
     {
-        if (!file_exists($filename)) {
+        if (file_exists($filename)) {
             foreach (Yaml::parse($filename) AS $name => $route)
             {
                 if (isset($route['import'])) {
