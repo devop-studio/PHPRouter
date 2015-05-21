@@ -31,7 +31,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase
 
     public function testRouterException()
     {
-        $this->setExpectedException('Millennium\Exceptions\RouteNotFoundException');
+        $this->setExpectedException('\Millennium\Exceptions\RouteNotFoundException', 'Route not found');
         $this->router->findRoute('/only-for-test/error404', $this->collection);
     }
 
