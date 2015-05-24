@@ -2,7 +2,9 @@ checks:
     php:
         code_rating: true
         duplication: true
-        
+filter:
+    excluded_paths:
+        - vendor/*
+        - Tests/*     
 tools:
-    external_code_coverage:
-        timeout: 600
+    external_code_coverage: true
