@@ -3,6 +3,8 @@
 
 [![Build Status](https://travis-ci.org/desertknight/symfony2-extensions.svg?branch=master)](https://travis-ci.org/desertknight/symfony2-extensions) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/desertknight/PHPRouter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/desertknight/PHPRouter/?branch=master) [![Latest Stable Version](https://poser.pugx.org/millennium/router/v/stable)](https://packagist.org/packages/millennium/router) [![Total Downloads](https://poser.pugx.org/millennium/router/downloads)](https://packagist.org/packages/millennium/router) [![Latest Unstable Version](https://poser.pugx.org/millennium/router/v/unstable)](https://packagist.org/packages/millennium/router) [![License](https://poser.pugx.org/millennium/router/license)](https://packagist.org/packages/millennium/router)
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/3455db82-ebd0-4767-852b-15e96b3aca74/mini.png)](https://insight.sensiolabs.com/projects/3455db82-ebd0-4767-852b-15e96b3aca74)
+
 ## Requirements:
 
 -    "php": ">=5.4.0"
