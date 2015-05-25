@@ -35,7 +35,7 @@ class RouterCollection implements IRouterCollection
      */
     public function collectRouters($filename)
     {
-        $routes = $this->parseFiles($filename);
+        $routes = $this->parseFiles(stream_resolve_include_path($filename));
         foreach ($routes AS $name => $route)
         {
             $node = &$this->routes;
@@ -60,10 +60,11 @@ class RouterCollection implements IRouterCollection
      * 
      * @return array
      */
-    private function parseFiles($filename, $routes = array(), $options = array())
+    private function parseFiles($file, $routes = array(), $options = array())
     {
+        $filename = stream_resolve_include_path($file);
         if (file_exists($filename)) {
-            foreach (Yaml::parse($filename) AS $name => $route)
+            foreach (Yaml::parse(file_get_contents($filename)) AS $name => $route)
             {
                 if (isset($route['import'])) {
                     return $this->parseFiles($route['import'], $routes, $route);

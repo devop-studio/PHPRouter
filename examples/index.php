@@ -6,7 +6,7 @@ use Millennium\Router;
 use Millennium\RouterCollection;
 use Symfony\Component\Yaml\Yaml;
 
-$config = Yaml::parse("./config/config.yml");
+$config = Yaml::parse(file_get_contents("./config/config.yml"));
 
 $collection = new RouterCollection();
 $routers = $collection->collectRouters($config['router']);
