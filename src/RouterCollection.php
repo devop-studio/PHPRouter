@@ -54,7 +54,7 @@ class RouterCollection implements IRouterCollection
 
     /**
      * 
-     * @param strig $file
+     * @param string $file
      * @param array $routes
      * @param array $options
      * 
