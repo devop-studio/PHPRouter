@@ -4,8 +4,9 @@ checks:
         duplication: true
 filter:
     excluded_paths:
+        - examples/*
         - vendor/*
-        - Tests/*     
+        - tests/*     
 tools:
     external_code_coverage:
         timeout: 600
