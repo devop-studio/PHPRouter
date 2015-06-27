@@ -8,12 +8,10 @@ php:
   - nightly
   
 before_install:
-    - composer self-update
+  - curl -s http://getcomposer.org/installer | php
+  - php composer.phar install
 
-install:
-    - composer update
-
-script: phpunit --coverage-clover=clover.xml
+script: vendor/bin/phpunit --coverage-clover=clover.xml
 
 after_script:
   - wget https://scrutinizer-ci.com/ocular.phar
