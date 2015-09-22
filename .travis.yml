@@ -16,5 +16,6 @@ before_install:
 script: vendor/bin/phpunit --coverage-clover=clover.xml
 
 after_script:
-  - wget https://scrutinizer-ci.com/ocular.phar
-  - php ocular.phar code-coverage:upload --format=php-clover clover.xml
+  phpunit --coverage-clover=coverage.clover
+  wget https://scrutinizer-ci.com/ocular.phar
+  php ocular.phar code-coverage:upload --access-token="your-token" --format=php-clover coverage.clover
