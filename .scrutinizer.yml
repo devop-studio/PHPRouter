@@ -4,7 +4,6 @@ checks:
         duplication: true
 filter:
     excluded_paths:
-        - examples/*
         - vendor/*
         - tests/*     
 tools:

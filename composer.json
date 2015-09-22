@@ -2,10 +2,10 @@
     "name": "millennium/router",
     "description": "Millennium PHP Router",
     "keywords": ["php", "router", "routing system", "array tree"],
-    "type": "library",
-    "license": "MIT",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "Zlatko Hristov",
@@ -14,8 +14,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/yaml": "2.7.3",
-        "phpunit/phpunit": "4.8.5"
+        "symfony/yaml": "2.7.4",
+        "phpunit/phpunit": "4.8.9"
     },
     "suggest": {
         "php": ">=5.4.0",

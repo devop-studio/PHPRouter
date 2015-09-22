@@ -2,9 +2,9 @@
 
 namespace Millennium;
 
-use Millennium\Interfaces\IRouter;
+use Millennium\Interfaces\IRouterInterface;
 
-class Router implements IRouter
+class Router implements IRouterInterface
 {
 
     /**

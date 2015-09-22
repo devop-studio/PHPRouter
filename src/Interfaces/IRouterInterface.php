@@ -2,7 +2,7 @@
 
 namespace Millennium\Interfaces;
 
-interface IRouter
+interface IRouterInterface
 {
 
     /**

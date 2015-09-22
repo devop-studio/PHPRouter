@@ -3,9 +3,9 @@
 namespace Millennium;
 
 use Symfony\Component\Yaml\Yaml;
-use Millennium\Interfaces\IRouterCollection;
+use Millennium\Interfaces\IRouterCollectionInterface;
 
-class RouterCollection implements IRouterCollection
+class RouterCollection implements IRouterCollectionInterface
 {
 
     /**
