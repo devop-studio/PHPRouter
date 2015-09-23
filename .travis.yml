@@ -1,6 +1,7 @@
 language: php
 
 php:
+  - 5.3
   - 5.4
   - 5.5
   - 5.6
@@ -8,14 +9,17 @@ php:
   - hhvm
   - nightly
   
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 before_install:
-  - curl -s http://getcomposer.org/installer | php
-  - php composer.phar self-update
-  - php composer.phar install
+  - composer self-update
+  - composer validate
+  - composer install --prefer-dist --no-interaction
 
-script: vendor/bin/phpunit --coverage-clover=clover.xml
-
-after_script:
-  phpunit --coverage-clover=coverage.clover
-  wget https://scrutinizer-ci.com/ocular.phar
-  php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+script:
+  - vendor/bin/phpunit --coverage-clover=coverage.clover
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+  
