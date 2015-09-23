@@ -18,7 +18,7 @@ interface IRouterInterface
      * @param array $routes
      * @param array $params
      * 
-     * @return type
+     * @return array
      * 
      * @throws Exceptions\RouteNotFoundException
      */
