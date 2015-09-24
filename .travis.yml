@@ -16,7 +16,7 @@ cache:
 before_install:
   - composer self-update
   - composer validate
-  - composer install --prefer-dist --no-interaction
+  - composer update --no-interaction
 
 script:
   - vendor/bin/phpunit --coverage-clover=coverage.clover
