@@ -1,6 +1,6 @@
 <?php
 
-namespace Millennium\Exceptions;
+namespace Millennium\Router\Exceptions;
 
 class RouteNotFoundException extends \Exception
 {

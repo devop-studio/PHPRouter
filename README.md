@@ -72,8 +72,8 @@ admin_user:
 
 include_once '../vendor/autoload.php';
 
-use Millennium\Router;
-use Millennium\RouterCollection;
+use Millennium\Router\Router;
+use Millennium\Router\RouterCollection;
 
 $routerCollection = new RouterCollection();
 $collections = $routerCollection->collectRouters("router.yml");

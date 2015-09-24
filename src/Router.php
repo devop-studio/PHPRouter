@@ -1,8 +1,8 @@
 <?php
 
-namespace Millennium;
+namespace Millennium\Router;
 
-use Millennium\Interfaces\IRouterInterface;
+use Millennium\Router\Interfaces\IRouterInterface;
 
 class Router implements IRouterInterface
 {

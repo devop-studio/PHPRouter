@@ -1,6 +1,6 @@
 <?php
 
-namespace Millennium\Exceptions;
+namespace Millennium\Router\Exceptions;
 
 class MethodNotAllowedException extends \Exception
 {

@@ -1,7 +1,7 @@
 <?php
 
-use Millennium\Router;
-use Millennium\RouterCollection;
+use Millennium\Router\Router;
+use Millennium\Router\RouterCollection;
 
 class RouterTest extends \PHPUnit_Framework_TestCase
 {
@@ -31,7 +31,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase
 
     public function testRouterException()
     {
-        $this->setExpectedException('\Millennium\Exceptions\RouteNotFoundException', 'Route not found');
+        $this->setExpectedException('\Millennium\Router\Exceptions\RouteNotFoundException', 'Route not found');
         $this->router->findRoute('/only-for-test/error404', $this->collection);
     }
 

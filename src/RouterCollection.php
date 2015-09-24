@@ -1,9 +1,9 @@
 <?php
 
-namespace Millennium;
+namespace Millennium\Router;
 
 use Symfony\Component\Yaml\Yaml;
-use Millennium\Interfaces\IRouterCollectionInterface;
+use Millennium\Router\Interfaces\IRouterCollectionInterface;
 
 class RouterCollection implements IRouterCollectionInterface
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Millennium\Interfaces;
+namespace Millennium\Router\Interfaces;
 
 interface IRouterCollectionInterface
 {
