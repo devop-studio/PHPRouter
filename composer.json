@@ -14,7 +14,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "symfony/yaml": "2.7.4",
+        "symfony/yaml": "2.7.5",
         "phpunit/phpunit": "4.8.9"
     },
     "suggest": {
