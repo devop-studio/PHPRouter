@@ -21,3 +21,7 @@ script:
   - vendor/bin/phpunit --coverage-clover=coverage.clover
   - wget https://scrutinizer-ci.com/ocular.phar
   - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+
+addons:
+  code_climate:
+    repo_token: a49b7d669fc78064872a1cb69df48722827d05d456e80ecbbd10bcf6c0c9b278
