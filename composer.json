@@ -12,7 +12,6 @@
             "email": "about@z-latko.info"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "symfony/yaml": "3.0.2",
         "phpunit/phpunit": "5.2.9"
