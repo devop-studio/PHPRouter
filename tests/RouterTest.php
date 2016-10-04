@@ -5,7 +5,6 @@ use Millennium\Router\RouterCollection;
 
 class RouterTest extends \PHPUnit_Framework_TestCase
 {
-
     private $router;
     private $collection;
 
@@ -23,10 +22,10 @@ class RouterTest extends \PHPUnit_Framework_TestCase
 
         $result2 = $this->router->findRoute('/user/5/edit', $this->collection);
         $this->assertEquals('Namespace:Controller:action', $result2['router']['action']);
-        $this->assertEquals(array(
-            'id' => 5,
-            'action' => 'edit'
-        ), $result2['parameters']);
+        $this->assertEquals([
+            'id'     => 5,
+            'action' => 'edit',
+        ], $result2['parameters']);
     }
 
     public function testRouterException()
@@ -34,5 +33,4 @@ class RouterTest extends \PHPUnit_Framework_TestCase
         $this->setExpectedException('\Millennium\Router\Exceptions\RouteNotFoundException', 'Route not found');
         $this->router->findRoute('/only-for-test/error404', $this->collection);
     }
-
 }
